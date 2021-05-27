@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eee7e7;
+}
+
+header {
+    padding: 10px;
+}
+
+header div {
+    margin-top: 50px;
+}
+
+header h1 {
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 10px;
+}
+
+header p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#gameboard {
+    background-color: rgb(179, 60, 60);
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    margin: auto;
+    width: 450px;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.square {
+    background-color: aliceblue;
+    border: 3px solid #bdbdbd;
+}
