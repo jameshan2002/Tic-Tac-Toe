@@ -24,17 +24,98 @@ header p {
 }
 
 #gameboard {
-    background-color: rgb(179, 60, 60);
-    display: grid;
-    grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;
-    margin: auto;
-    width: 450px;
-    padding: 10px;
+    background-color: #bdbdbd;
+    margin: 50px auto;
+    width: 462px;
+    height: 462px;
+    padding: 13px;
     border-radius: 5%;
+}
+
+.squares {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .square {
     background-color: aliceblue;
-    border: 3px solid #bdbdbd;
+    border: 2px solid #bdbdbd;
+    display: flex;
+    height: 150px;
+    width: 150px;
+    border-radius: 10%;
+}
+
+.square.X {
+    background-color: rgb(192, 52, 52);
+}
+
+.square.X:before {
+    margin-left: 70px;
+    content: '';
+    border-left: 4px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.X:after {
+    content: '';
+    border-left: 4px solid #fff;
+    transform: rotate(45deg);
+}
+
+
+.square.O {
+    background-color: yellowgreen;
+}
+
+.O:before {
+    position: relative;
+    top: -120px;
+    left: -2px;
+    content: ' \25CF';
+    font-size: 250px;
+    color: white;
+  }
+
+.O:after {
+    position: relative;
+    top: -108px;
+    left: -148.5px;
+    content: ' \25CF';
+    font-size: 235px;
+    color: yellowgreen;
+}
+
+#message {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-weight: 300;
+}
+.message-content {
+    margin: 20% auto; /* 15% from the top and centered */
+    padding: 20px;
+}
+.messageText {
+    font-size: 70px;
+}
+#restartButton {
+    font-size: 20px;
+    font-weight: 300;
+    background-color: white;
+    border: 2px solid grey;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 15%;
+    transition: all .2s ease-in-out;
+}
+#restartButton:hover {
+    transform: scale(1.05); 
 }
