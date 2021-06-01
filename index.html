@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Tic-Tac-Toe</title>
 </head>
+
 <body>
     <header>
         <div>
@@ -17,14 +19,23 @@
         </div>
     </header>
     <section id="gameboard">
-        <div class="squares"></div>
-    </section>
-    <div id="message">
-        <div class="message-content">
-            <div class="messageText">X win!</div>
-            <button id="restartButton">Restart</button>
+        <div class="squares" id="board">
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
+            <div class="square" data-cell></div>
         </div>
+    </section>
+    <div id="winningMessage">
+        <div class="messageText" data-winning-message-text></div>
+        <button id="restartButton">Restart</button>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
